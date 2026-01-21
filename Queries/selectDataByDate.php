@@ -5,6 +5,7 @@
     $res=mysqli_query($con,$show_by_date);
 
     if($res && mysqli_num_rows($res)>0){
+        echo "Data is Below";
     }else{
         echo "Failed to retrieve data";
     }

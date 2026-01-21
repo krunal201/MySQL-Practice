@@ -21,6 +21,5 @@
     }else{
         echo "Failed While Inserting Record";
     }
-
     mysqli_close($con);
 ?>
