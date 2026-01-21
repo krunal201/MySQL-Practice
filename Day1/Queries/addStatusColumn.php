@@ -10,4 +10,5 @@
     }else{
         echo "Fail";
     }
+    mysqli_close($con);
 ?>

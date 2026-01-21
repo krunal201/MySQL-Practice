@@ -8,4 +8,5 @@
     }else{
         echo "Faild while adding column";
     }
+    mysqli_close($con);
 ?>

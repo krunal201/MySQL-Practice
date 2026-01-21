@@ -8,4 +8,5 @@
     }else{
         echo "Failed";
     }
+    mysqli_close($con);
 ?>
