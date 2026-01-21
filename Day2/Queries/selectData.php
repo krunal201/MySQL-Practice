@@ -1,6 +1,7 @@
 <?php 
     require('../../connect.php');
 
+    $slQry="";
     //1] Show data where dept id not 4 and 5
     // $sqlQry="select firstname, lastname, office_code, office_city, job_title from employee where dId not in(4,5)";
     // $res=mysqli_query($con,$sqlQry);
@@ -21,6 +22,29 @@
     // $slQry5="select firstname, lastname from employee order by firstname asc";
     // $res=mysqli_query($con,$slQry5);
 
+    //6]
+    // $slQry6="select firstname, lastname, email from employee where salary=(select max(salary) from employee)";
+    // $res=mysqli_query($con,$slQry6);
+
+    //7]
+    // $slQry7="select firstname, lastname, email from employee where salary=(select min(salary) from employee)";
+    // $res=mysqli_query($con,$slQry7);
+
+    //8]
+    // $slQry8="select sum(salary) as paid_salary from employee";
+    // $res=mysqli_query($con,$slQry8);
+
+    //9]
+    // $slQry9="select count(eId) as total_sale_rep from employee where job_title = 'Sales Rep' ";
+    // $res=mysqli_query($con,$slQry9);
+
+    //10]
+    // $slQry10="select firstname,lastname,email from employee where join_date > 2020-01-01 ";
+    // $res=mysqli_query($con,$slQry10);
+
+    //11]
+    // $slQry11="select * from employee where job_title like '%manager'";
+    // $res=mysqli_query($con,$slQry11);
     if($res){
         echo "Total_Employee";
         mysqli_num_rows($res);
@@ -47,7 +71,9 @@
         while($row=mysqli_fetch_assoc($res)){
         ?>
             <tr>
-                <!-- <td><?php //echo $row['Total_Employee']; ?></td> -->
+                <!-- <td><?php //echo "Total emp".$row['Total_Employee']; ?></td> -->
+                <!-- <td><?php //echo "Total salary paid to emp: ".$row['paid_salary']; ?></td> -->
+                <!-- <td><?php //echo "Total Sale Rep: ".$row['total_sale_rep']; ?></td> -->
                 <td><?php echo $row['firstname']; ?></td>
                 <td><?php echo $row['lastname']; ?></td>
             </tr>
