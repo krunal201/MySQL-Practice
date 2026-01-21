@@ -39,12 +39,21 @@
     // $res=mysqli_query($con,$slQry9);
 
     //10]
-    // $slQry10="select firstname,lastname,email from employee where join_date > 2020-01-01 ";
+    // $slQry10="select firstname,lastname,email from employee where join_date > '2020-01-01' ";
     // $res=mysqli_query($con,$slQry10);
 
     //11]
-    // $slQry11="select * from employee where job_title like '%manager'";
+    // $slQry11="select firstname, lastname, email from employee where job_title like '%manager'";
     // $res=mysqli_query($con,$slQry11);
+
+    //12]
+    // $slQry12="select firstname, lastname, email from employee where job_title = 'Sales Manager' ";
+    // $res=mysqli_query($con,$slQry12);
+
+    //13]
+    // $slQry13="select * from employee where job_title='Sales manager' and join_date > '2021-01-01' ";
+    // $res=mysqli_query($con,$slQry13);
+
     if($res){
         echo "Total_Employee";
         mysqli_num_rows($res);
