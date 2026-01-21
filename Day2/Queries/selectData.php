@@ -50,8 +50,8 @@
     // $res=mysqli_query($con,$slQry12);
 
     //13] Show data employess whose joining date is > 2021-01-01 and job title is sales manager.
-    // $slQry13="select * from employee where job_title='Sales manager' and join_date > '2021-01-01' ";
-    // $res=mysqli_query($con,$slQry13);
+    $slQry13="select * from employee where job_title='Sales manager' and join_date > '2021-01-01' ";
+    $res=mysqli_query($con,$slQry13);
 
     if($res){
         echo "Total_Employee";
