@@ -5,7 +5,7 @@ Right now nothing but will be update in future.
 ## How to use?
 1<sup>st</sup>: you need to run 👉 [createDB](createDB.php)<br/>
 2<sup>nd</sup>: need to create tables according to folder.<br/>
-3<sup>rd</sup>: Run query files manually and if you want to run Day2 Queries then uncomment it one by one.
+3<sup>rd</sup>: Run query files manually and if you want to run Day2 or Day3 Queries then uncomment it one by one.
 
 ## Folder Structure
 
