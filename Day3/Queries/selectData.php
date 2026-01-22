@@ -36,11 +36,18 @@
     // $res=mysqli_query($con,$sqlQry9);
 
     //10] all record of news and article table using UNION
-    $sqlQry10="select title,news_id from news where news_id=1 union select title,news_id from article where news_id between 1 and 3 ";
+    // $sqlQry10="select title,news_id, NULL AS description from news 
+    // where news_id=1 union select title,news_id, NULL AS content from article where news_id between 1 and 3 ";
+
+    $sqlQry10 = "SELECT title, news_id, description FROM news
+    WHERE news.news_id = 1
+    UNION
+    SELECT title, news_id, content AS description FROM article
+    WHERE article.news_id BETWEEN 1 AND 3";
     $res=mysqli_query($con,$sqlQry10);
 
     if($res){
-        echo "Done";
+        // echo "Done";
         mysqli_num_rows($res);
     }else{
         echo "Fail";
@@ -66,7 +73,9 @@
             <th>Dept ID</th>
             -->
             <th>Title</th> 
-            <th>ID</th> 
+            <th>news_ID</th> 
+            <th>description</th> 
+            <!-- <th>content</th>  -->
             <!-- <th>Dept Location</th> -->
         </tr>
 
@@ -81,8 +90,11 @@
                 <td><?php // echo $row['job_title']; ?></td>
                 <td><?php //echo $row['dId']; ?></td> -->
                 <!-- <td><?php //echo $row['dept_location']; ?></td> -->
+
                 <td><?php echo $row['title']; ?></td>
                 <td><?php echo $row['news_id']; ?></td>
+                <td><?php echo $row['description']; ?></td>
+                <!-- <td><?php //echo $row['content']; ?></td> -->
             </tr>
         <?php 
          }       
