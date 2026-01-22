@@ -36,7 +36,7 @@
     // $res=mysqli_query($con,$sqlQry9);
 
     //10]
-    $sqlQry10="select title from news union select title from article where news_id between 1 and 3 ";
+    $sqlQry10="select title,news_id from news where news_id=1 union select title,news_id from article where news_id between 1 and 3 ";
     $res=mysqli_query($con,$sqlQry10);
 
     if($res){
@@ -66,6 +66,7 @@
             <th>Dept ID</th>
             -->
             <th>Title</th> 
+            <th>ID</th> 
             <!-- <th>Dept Location</th> -->
         </tr>
 
@@ -81,6 +82,7 @@
                 <td><?php //echo $row['dId']; ?></td> -->
                 <!-- <td><?php //echo $row['dept_location']; ?></td> -->
                 <td><?php echo $row['title']; ?></td>
+                <td><?php echo $row['news_id']; ?></td>
             </tr>
         <?php 
          }       
