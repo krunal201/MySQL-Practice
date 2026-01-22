@@ -3,39 +3,39 @@
 
     $sqlQry="";
     
-    //1]
+    //1] query to find the firstName, lastName, officeCode, officeCity, jobTitle of all the employees.
     // $sqlQry1="select firstname,lastname,office_code,office_city,job_title from employee";
     // $res=mysqli_query($con,$sqlQry1);
 
-    //2]
+    //2] query to find the firstName, lastName, officecode, officeCity of all the employees whose department is "4" USING LEFT JOIN
     // $sqlQry2="select firstname, lastname, office_code, office_city, job_title,dept_location from employee right join department on employee.dId=department.dept_id where department.dept_id=4 ";
     // $res=mysqli_query($con,$sqlQry2);
 
-    //3]
+    //3] query to find the firstName, lastName, officecode, officeCity of all the employees whose department is "4" USING RIGHT JOIN
     // $sqlQry3="select firstname, lastname, office_code, office_city, job_title,dept_location from employee right join department on employee.dId=department.dept_id  where department.dept_id=4";
     // $res=mysqli_query($con,$sqlQry3);
 
-    //4]
+    //4] query to find the firstName, lastName, officecode, officeCity of all the employees whose department is "4" USING INNER JOIN
     // $sqlQry4="select firstname, lastname, office_code, office_city, job_title,dept_location from employee inner join department on employee.dId=department.dept_id where  where department.dept_id=4 ";
     // $res=mysqli_query($con,$sqlQry4);
 
-    // 5].
+    //5] query to find the firstName, lastName, officecode, officeCity from employee and offices USING FULL JOIN
     // $sqlQry5="select firstname, lastname, office_code, office_city, job_title,dept_location from employee full join department on employee.dId=department.dept_id ";
     // $res=mysqli_query($con,$sqlQry5);
 
-    //6]
+    //6] query to find the firstName, lastName, email, joinDate of all the employees whose join date between 2019-01-01 to 2022-01-01.
     // $sqlQry6="select firstname, lastname, office_code, office_city, job_title from employee where join_date between '2019-01-01' and '2022-01-01' ";
     // $res=mysqli_query($con,$sqlQry6);
 
-    //8]
+    //8] query to find the firstName, lastName, email, joinDate of all the employees whose join date is null
     // $sqlQry8="select firstname, lastname, office_code, office_city, job_title from employee where join_date is null ";
     // $res=mysqli_query($con,$sqlQry8);
 
-    //9]
+    //9] query to find the firstName, lastName, officeCode, officeCity, jobTitle of all the employees whose department is 1 and 3 using IN.
     // $sqlQry9="select firstname, lastname, office_code, office_city, job_title, dId from employee where dId in (1,3) ";
     // $res=mysqli_query($con,$sqlQry9);
 
-    //10]
+    //10] all record of news and article table using UNION
     $sqlQry10="select title,news_id from news where news_id=1 union select title,news_id from article where news_id between 1 and 3 ";
     $res=mysqli_query($con,$sqlQry10);
 
