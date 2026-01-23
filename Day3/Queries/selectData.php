@@ -39,13 +39,19 @@
     // $sqlQry10="select title,news_id, NULL AS description from news 
     // where news_id=1 union select title,news_id, NULL AS content from article where news_id between 1 and 3 ";
 
+    // $sqlQry10 = "SELECT title, news_id, description FROM news
+    // WHERE news.news_id = 1
+    // UNION
+    // SELECT title, news_id, content AS description FROM article
+    // WHERE article.news_id BETWEEN 1 AND 3";
+    // $res=mysqli_query($con,$sqlQry10);
+
+
     $sqlQry10 = "SELECT title, news_id, description FROM news
-    WHERE news.news_id = 1
     UNION
     SELECT title, news_id, content AS description FROM article
     WHERE article.news_id BETWEEN 1 AND 3";
     $res=mysqli_query($con,$sqlQry10);
-
     if($res){
         // echo "Done";
         mysqli_num_rows($res);
