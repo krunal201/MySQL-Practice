@@ -56,3 +56,24 @@ test_case_id, module, description, input, expected output, actual output, status
 | TC_010           | Error Handling     | Verify the system handles missing check-in date input.           | Location: "State Name", Check-out: "2026-05-15", Guests: 2                                               | Error message: "Please select a check-in date."                                            | "Please select a check-in date" error displayed.       | **Pass**   |
 | TC_011           | Responsiveness     | Verify the platform’s responsiveness on mobile devices.          | Open site on mobile device (e.g., iPhone, Android)                                                       | The layout should adjust to fit the screen size properly.                                  | Layout adjusts and displays correctly on mobile.       | **Pass**   |
 | TC_012           | Hotel Search       | Verify the system handles searches with no location input.       | Location: "", Check-in: "2026-05-10", Check-out: "2026-05-15"                                            | Error message: "Location cannot be empty."                                                 | "Location cannot be empty" error displayed.            | **Pass**   |
+
+6.4
+System Overview
+
+The hotel booking platform for [State Name] is designed to help users easily filter, and book hotels near their destination place in this state. The system allows travelers to browse through a wide range of local hotels, guesthouses, and boutique stays, providing them with detailed descriptions, pricing, availability, and booking options. User can register, check booking history and give ratings.
+
+The goal of the system is to offer a seamless experience for both local and international travelers, ensuring they can find and book accommodations that match their preferences efficiently.
+
+
+The following technologies and tools are used to build and deploy the hotel booking platform:
+
+Frontend:
+HTML5, CSS3, JavaScript
+Bootstrap (for responsive design)
+
+Backend:
+PHP
+
+Database:
+MySQL
+
