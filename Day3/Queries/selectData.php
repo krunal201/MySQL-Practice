@@ -27,6 +27,10 @@
     // $sqlQry6="select firstname, lastname, office_code, office_city, job_title from employee where join_date between '2019-01-01' and '2022-01-01' ";
     // $res=mysqli_query($con,$sqlQry6);
 
+    //7]
+    // $sqlQry7="select firstname, lastname, office_code, office_city, job_title from employee where join_date is not null";
+    // $res=mysqli_query($con,$sqlQry7);
+
     //8] query to find the firstName, lastName, email, joinDate of all the employees whose join date is null
     // $sqlQry8="select firstname, lastname, office_code, office_city, job_title from employee where join_date is null ";
     // $res=mysqli_query($con,$sqlQry8);
@@ -51,6 +55,7 @@
     UNION
     SELECT title, news_id, content AS description FROM article
     WHERE article.news_id BETWEEN 1 AND 3";
+
     $res=mysqli_query($con,$sqlQry10);
     if($res){
         // echo "Done";
@@ -71,16 +76,17 @@
 <body>
     <table border="1">
         <tr>
-            <!-- <th>Firstname</th>
+            <th>Firstname</th>
+            <!-- 
             <th>LastName</th>
             <th>Office Code</th>
             <th>Office City</th>
             <th>Job Title</th>
             <th>Dept ID</th>
             -->
-            <th>Title</th> 
+            <!-- <th>Title</th> 
             <th>news_ID</th> 
-            <th>description</th> 
+            <th>description</th>  -->
             <!-- <th>content</th>  -->
             <!-- <th>Dept Location</th> -->
         </tr>
@@ -89,7 +95,8 @@
         while($row=mysqli_fetch_assoc($res)){
         ?>
             <tr>
-                <!-- <td><?php //echo $row['firstname']; ?></td>
+                <td><?php echo $row['firstname']; ?></td>
+                <!-- 
                 <td><?php //echo $row['lastname']; ?></td>
                 <td><?php //echo $row['office_code']; ?></td>
                 <td><?php //echo $row['office_city']; ?></td>
@@ -97,9 +104,9 @@
                 <td><?php //echo $row['dId']; ?></td> -->
                 <!-- <td><?php //echo $row['dept_location']; ?></td> -->
 
-                <td><?php echo $row['title']; ?></td>
-                <td><?php echo $row['news_id']; ?></td>
-                <td><?php echo $row['description']; ?></td>
+                <!-- <td><?php //echo $row['title']; ?></td>
+                <td><?php //echo $row['news_id']; ?></td>
+                <td><?php //echo $row['description']; ?></td> -->
                 <!-- <td><?php //echo $row['content']; ?></td> -->
             </tr>
         <?php 

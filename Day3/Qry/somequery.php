@@ -17,8 +17,8 @@
     // $qry4="select count(eId) as dId,sum(salary) as salary,office_city from employee group by office_city having count(eId)>3";
     // $res=mysqli_query($con,$qry4);
 
-    // Get the maximum salary for each department, but only for departments where the maximum salary is greater than $100,000.
-    $qry5="";
+    // Get the maximum salary for each department, but only for departments where the maximum salary is greater than 45000.
+    $qry5="select max(salary)as salary,dId,job_title from employee group by dId having max(salary)>45000";
     $res=mysqli_query($con,$qry5);
     // Find the number of employees in each department, but only for departments where the number of employees is more than 20.
 
@@ -43,9 +43,9 @@
 <body>
     <table border="1">
         <tr>
-            <th>total cities with paid salary</th>
+            <!-- <th>total cities with paid salary</th>
             <th>Average salary paid</th>
-            <th>Office City</th>
+            <th>Office City</th> -->
             <!-- 
             <th>LastName</th>
             <th>Office Code</th>
@@ -60,9 +60,10 @@
         ?>
             <tr>
                 <!-- <td><?php //echo $row['City']; ?></td> -->
-                <td><?php echo $row['dId']; ?></td>
+                <!-- <td><?php //echo $row['dId']; ?></td> -->
                 <td><?php echo $row['salary']; ?></td>
-                <td><?php echo $row['office_city']; ?></td>
+                <!-- <td><?php //echo $row['job_title']; ?></td> -->
+                <!-- <td><?php //echo $row['office_city']; ?></td> -->
                 <!-- <td><?php //echo $row['lastname']; ?></td>
                 <td><?php //echo $row['office_code']; ?></td>
                 <td><?php //echo $row['office_city']; ?></td>
