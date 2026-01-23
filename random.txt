@@ -103,3 +103,5 @@ Global platforms may struggle with filtering when users are looking for specific
 
 International Visibility of Local Platforms:
 Local platforms focused on a specific state may struggle with visibility outside of that country. It limits the ability of international travelers to discover these platforms when searching for hotels in that state.
+
+
