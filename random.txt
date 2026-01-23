@@ -77,3 +77,29 @@ PHP
 Database:
 MySQL
 
+----------------------------------------------------------------------
+3
+Overview of Existing Systems
+
+Global Hotel Booking Platforms:
+The hotel booking platforms has been increasing with more speed incompare to other years because of global websites like Booking.com, Expedia. These websites provide easy hotel booking for users around whole world. They are widly used because of their connection with some specified hotel in whole world.
+
+These website have some limits when it comes to locality. Those websites provide hotels with high price and for some user it is costly and can't plan their budget. These global platforms are made for global audience and do not offer local knowledge for a specific [State Name].
+
+local hotel booking platforms, such as Stayz (focused on Australia) are designed to fill some of the gaps in the global platforms by offering a more localized selection of hotel bookings. These platforms focuses on independent hotels which may not be listed on global booking websites.
+
+
+Gaps in Existing Systems:
+global hotel booking platforms offer wide selection of hotels but they fail to meet the needs of travelers who are finding hotels in specific state.
+
+Limited Focus on Local Hotels:
+Global platforms like Booking.com or Expedia, focus on a wide range of properties because of that local or state specific hotels can't be highlight 
+
+Lack of Regional Specialization:
+Travelers looking for detailed information on local or state specific hotels or tourism-specific services may find global platforms broad.
+
+User Experience Issues:
+Global platforms may struggle with filtering when users are looking for specific types of hotels in a particular area. For example, a traveler searching for budget hotels in a specific state may be presented with options from a wide variety of locations, making it difficult to display.
+
+International Visibility of Local Platforms:
+Local platforms focused on a specific state may struggle with visibility outside of that country. It limits the ability of international travelers to discover these platforms when searching for hotels in that state.
