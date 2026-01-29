@@ -51,11 +51,13 @@
     // $res=mysqli_query($con,$sqlQry10);
 
 
-    $sqlQry10 = "SELECT title, news_id, description FROM news
-    UNION
-    SELECT title, news_id, content AS description FROM article
-    WHERE article.news_id BETWEEN 1 AND 3";
+    // $sqlQry10 = "SELECT title, news_id, description FROM news
+    // UNION
+    // SELECT title, news_id, content AS description FROM article
+    // WHERE article.news_id BETWEEN 1 AND 3";
 
+
+     $sqlQry10 = "SELECT firstname FROM employee where cast(join_date as date)";
     $res=mysqli_query($con,$sqlQry10);
     if($res){
         // echo "Done";
@@ -67,7 +69,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
