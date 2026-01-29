@@ -57,8 +57,11 @@
     // WHERE article.news_id BETWEEN 1 AND 3";
 
 
-     $sqlQry10 = "SELECT firstname,join_date FROM employee where cast(join_date as date)";
+    // $sqlQry10 = "SELECT firstname,join_date FROM employee where cast(join_date as date)";
+
+    $sqlQry10 = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS where TABLE_SCHEMA=DATABASE() AND TABLE_NAME='employee' AND COLUMN_NAME='join_date' AND COLUMN_TYPE='date' ";
     $res=mysqli_query($con,$sqlQry10);
+    
     if($res){
         // echo "Done";
         mysqli_num_rows($res);
@@ -98,7 +101,8 @@
         while($row=mysqli_fetch_assoc($res)){
         ?>
             <tr>
-                <td><?php echo $row['firstname']; ?></td>
+                <!-- <td><?php //echo $row['firstname']; ?></td> -->
+                 <?php  echo "Column name: " . $row['COLUMN_NAME']; ?>
                 <td><?php echo $row['join_date']; ?></td>
                 <!-- 
                 <td><?php //echo $row['lastname']; ?></td>
