@@ -57,7 +57,7 @@
     // WHERE article.news_id BETWEEN 1 AND 3";
 
 
-     $sqlQry10 = "SELECT firstname FROM employee where cast(join_date as date)";
+     $sqlQry10 = "SELECT firstname,join_date FROM employee where cast(join_date as date)";
     $res=mysqli_query($con,$sqlQry10);
     if($res){
         // echo "Done";
@@ -79,6 +79,7 @@
     <table border="1">
         <tr>
             <th>Firstname</th>
+            <th>Join Date</th>
             <!-- 
             <th>LastName</th>
             <th>Office Code</th>
@@ -98,6 +99,7 @@
         ?>
             <tr>
                 <td><?php echo $row['firstname']; ?></td>
+                <td><?php echo $row['join_date']; ?></td>
                 <!-- 
                 <td><?php //echo $row['lastname']; ?></td>
                 <td><?php //echo $row['office_code']; ?></td>
